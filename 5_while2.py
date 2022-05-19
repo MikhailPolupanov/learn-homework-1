@@ -24,7 +24,11 @@ def ask_user(answers_dict):
     while True:
       question = input('Пользователь ')
       if question.lower() in questions_and_answers.keys():
-        print(f'Программа: {questions_and_answers[question]}')
+        quest = question.lower()
+        print(f'Программа: {questions_and_answers[quest]}') 
+        # Почему то если не вводить переменную, в которую писать question маленькими буквами, а сразу писать question 
+        # в квадратных скобках принта, то выдает ошибку, если писать с Большой буквы вопрос. Не понимаю почему ошибка,
+        # но таким образом она починилась
       else:
         pass
         break
