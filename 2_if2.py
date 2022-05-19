@@ -20,7 +20,27 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    def strings(str1, str2):
+      if type(str1) == str and type(str2) == str:
+        if len(str1) == len(str2):
+          print('1')
+        elif len(str1) > len(str2) and str2 != "learn": 
+          print('2')
+        elif len(str1) != len(str2) and str2 == 'learn':
+          print('3')
+        elif len(str1) < len(str2):
+          pass #Так сделал, чтобы ничего не выводило. Но можно вывести текст: "Сценарий не понятен"
+      else:
+        print('0')
+    
+    strings(25, 'delay bystro')
+    strings('delay bystro', 25)
+    strings('nado', 'dano')
+    strings('nado bi', 'dano')
+    strings('надо', 'learn')
+    strings('надо', 'delay bystro')
+    
+
     
 if __name__ == "__main__":
     main()

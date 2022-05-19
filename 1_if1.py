@@ -19,7 +19,21 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    def age_result(ageold):
+      if ageold < 7:
+        return 'Вы скорее всего учитесь в детском саду'
+      elif ageold > 6 and ageold < 17:
+        return 'Вы скорее всего школьник'
+      elif ageold > 17 and ageold < 23:
+        return 'Вы скорее всего учитесь в ВУЗе'
+      else:
+        return 'Вы скорее всего работаете'
+    
+    age = input('Введите ваш возраст ')
+    age = abs(int(age))
+    result = age_result(age)
+    print(result) 
+
 
 if __name__ == "__main__":
     main()
