@@ -16,6 +16,7 @@ import logging
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import ephem
+import settings
 
 logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO,
@@ -102,7 +103,7 @@ def eph(update, context):
 
 
 def main():
-    mybot = Updater("5383050213:AAE-BMEUqgEY6pohwfxsjlWZeUrGmPXDYtg", use_context=True)
+    mybot = Updater(settings.API_KEY, use_context=True)
 
     dp = mybot.dispatcher
     dp.add_handler(CommandHandler("start", greet_user))
