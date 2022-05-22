@@ -26,6 +26,8 @@ def main():
         return 'Вы скорее всего школьник'
       elif ageold > 17 and ageold < 23:
         return 'Вы скорее всего учитесь в ВУЗе'
+      elif  ageold == 34:
+        return 'Вас должно быть зовут Юля'
       else:
         return 'Вы скорее всего работаете'
     

@@ -15,6 +15,7 @@
 import logging
 
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from datetime import date
 import ephem
 import settings
 
@@ -36,61 +37,62 @@ def talk_to_me(update, context):
     update.message.reply_text(user_text)
 
 def eph(update, context):
+    date_today = date.today()
     planet_text = update.message.text
     planetext = planet_text.split(' ')
     planet = planetext[1]
     print(planet)
-    if planetext[1] == 'Mars' or planetext[1] == 'Марс':
-        place = ephem.Mars('2022/05/19')
+    if planetext[1] == 'mars'.lower() or planetext[1] == 'марс'.lower():
+        place = ephem.Mars(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
-    elif planetext[1] == 'Mercury':
-        place = ephem.Mercury('2022/05/19')
+    elif planetext[1] == 'mercury'.lower():
+        place = ephem.Mercury(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
-    elif planetext[1] == 'Venus':
-        place = ephem.Venus('2022/05/19')
+    elif planetext[1] == 'venus'.lower():
+        place = ephem.Venus(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con) 
-    elif planetext[1] == 'Earth':
-        place = ephem.Earth('2022/05/19')
+    elif planetext[1] == 'earth'.lower():
+        place = ephem.Earth(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
-    elif planetext[1] == 'Jupiter':
-        place = ephem.Jupiter('2022/05/19')
+    elif planetext[1] == 'jupiter'.lower():
+        place = ephem.Jupiter(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
-    elif planetext[1] == 'Saturn':
-        place = ephem.Saturn('2022/05/19')
+    elif planetext[1] == 'saturn'.lower():
+        place = ephem.Saturn(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
-    elif planetext[1] == 'Uranus':
-        place = ephem.Uranus('2022/05/19')
+    elif planetext[1] == 'uranus'.lower():
+        place = ephem.Uranus(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
-    elif planetext[1] == 'Neptune':
-        place = ephem.Neptune('2022/05/19')
+    elif planetext[1] == 'neptune'.lower():
+        place = ephem.Neptune(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
-    elif planetext[1] == 'Pluto':
-        place = ephem.Pluto('2022/05/19')
+    elif planetext[1] == 'pluto'.lower():
+        place = ephem.Pluto(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
-    elif planetext[1] == 'Sun':
-        place = ephem.Sun('2022/05/19')
+    elif planetext[1] == 'sun'.lower():
+        place = ephem.Sun(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
-    elif planetext[1] == 'Moon':
-        place = ephem.Moon('2022/05/19')
+    elif planetext[1] == 'moon'.lower():
+        place = ephem.Moon(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
