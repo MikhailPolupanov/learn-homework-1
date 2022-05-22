@@ -42,56 +42,56 @@ def eph(update, context):
     planetext = planet_text.split(' ')
     planet = planetext[1]
     print(planet)
-    if planetext[1] == 'mars'.lower() or planetext[1] == 'марс'.lower():
+    if planetext[1].lower() == 'mars' or planetext[1].lower() == 'марс':
         place = ephem.Mars(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
-    elif planetext[1] == 'mercury'.lower():
+    elif planetext[1].lower() == 'mercury' or planetext[1].lower() == 'меркурий':
         place = ephem.Mercury(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
-    elif planetext[1] == 'venus'.lower():
+    elif planetext[1].lower() == 'venus':
         place = ephem.Venus(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con) 
-    elif planetext[1] == 'earth'.lower():
+    elif planetext[1].lower() == 'earth':
         place = ephem.Earth(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
-    elif planetext[1] == 'jupiter'.lower():
+    elif planetext[1].lower() == 'jupiter':
         place = ephem.Jupiter(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
-    elif planetext[1] == 'saturn'.lower():
+    elif planetext[1].lower() == 'saturn':
         place = ephem.Saturn(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
-    elif planetext[1] == 'uranus'.lower():
+    elif planetext[1].lower() == 'uranus':
         place = ephem.Uranus(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
-    elif planetext[1] == 'neptune'.lower():
+    elif planetext[1].lower() == 'neptune':
         place = ephem.Neptune(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
-    elif planetext[1] == 'pluto'.lower():
+    elif planetext[1].lower() == 'pluto':
         place = ephem.Pluto(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
-    elif planetext[1] == 'sun'.lower():
+    elif planetext[1].lower() == 'sun':
         place = ephem.Sun(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
         update.message.reply_text(place_con)
-    elif planetext[1] == 'moon'.lower():
+    elif planetext[1].lower() == 'moon':
         place = ephem.Moon(date_today)
         place_con = ephem.constellation(place)
         print(place_con)
